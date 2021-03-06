@@ -10,13 +10,18 @@ import androidx.fragment.app.Fragment
 import com.udacity.asteroidradar.R
 import com.udacity.asteroidradar.databinding.FragmentDetailBinding
 
+/**
+ * Detail fragment class used to show detail information for an asteroid clicked on from main fragment
+ *
+ * @constructor Create empty Detail fragment
+ */
 class DetailFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val binding = FragmentDetailBinding.inflate(inflater)
         binding.lifecycleOwner = this
 
-        val asteroid = DetailFragmentArgs.fromBundle(arguments!!).selectedAsteroid
+        val asteroid = DetailFragmentArgs.fromBundle(requireArguments()).selectedAsteroid
 
         binding.asteroid = asteroid
 
@@ -28,7 +33,7 @@ class DetailFragment : Fragment() {
     }
 
     private fun displayAstronomicalUnitExplanationDialog() {
-        val builder = AlertDialog.Builder(activity!!)
+        val builder = AlertDialog.Builder(requireActivity())
             .setMessage(getString(R.string.astronomica_unit_explanation))
             .setPositiveButton(android.R.string.ok, null)
         builder.create().show()

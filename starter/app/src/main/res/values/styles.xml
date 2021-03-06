@@ -6,17 +6,18 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:textColor">@color/default_text_color</item>
-        <item name="android:background">@color/app_background</item>
     </style>
 
     <style name="text_large_bold">
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/default_text_color</item>
     </style>
 
     <style name="text_medium_regular">
         <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/default_text_color</item>
     </style>
+
 
 </resources>
